@@ -1,6 +1,6 @@
 import React from 'react';
-import AddEmail from './components/AddEmail';
-import EmailList from './components/EmailList';
+import AddEmail from './components/Email/AddEmail';
+import EmailList from './components/Email/EmailList';
 
 const App = () => {
   return (

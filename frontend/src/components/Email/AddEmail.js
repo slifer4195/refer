@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const AddEmail = () => {
+const AddEmail = ({ onEmailAdded }) => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
@@ -20,6 +20,9 @@ const AddEmail = () => {
       // On success, set a success message and clear the input
       setMessage('Email added successfully!');
       setEmail('');
+
+      // Call the parent callback to update the email list in the parent component
+      onEmailAdded();
     } catch (error) {
       // Display the error message from the API response, if available
       if (error.response && error.response.data) {

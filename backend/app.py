@@ -30,18 +30,22 @@ class Email(db.Model):
         return f'<Email {self.email_address}>'
 
 # Route to send email
-@app.route('/send_email')
+@app.route('/send_email', methods=['GET'])
 def send_email():
+    email = request.args.get('email')
+    if not email:
+        return 'Email address is required.', 400
+
     try:
         msg = Message(
-            'Hello from Flask!',  # Subject
-            recipients=['slifer4195@tamu.edu']  # Receiver
-        ) 
-        msg.body = 'This is a test email sent from slifer4195@gmail.com using Flask.'
+            'Hello from Flask!',
+            recipients=[email]
+        )
+        msg.body = 'This is a test email sent from Flask.'
         mail.send(msg)
-        return 'Email sent successfully!'
+        return f'Email sent successfully to {email}!'
     except Exception as e:
-        return f'Failed to send email: {e}'
+        return f'Failed to send email: {e}', 500
 
 # Route to get all email addresses
 @app.route('/emails', methods=['GET'])

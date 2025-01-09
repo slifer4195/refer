@@ -1,0 +1,31 @@
+.email-item {
+    color: black; /* Default color */
+    cursor: pointer;
+    text-decoration: none;
+    background-color: blanchedalmond;
+}
+  
+.email-item:hover {
+  font-weight: bolder;
+  background-color: aqua;
+}
+  
+.email-item.clicked {
+  background-color: rgb(101, 255, 101); /* Color when clicked */
+}
+
+.dltBtn {
+  background-color: red;
+  color: black;
+  margin-left: 20px;
+}
+
+.dltBtn:hover {
+  background-color: aqua;
+  font-weight: bolder;
+}
+
+.dltBtn.clicked {
+  background-color: red;
+}
+  

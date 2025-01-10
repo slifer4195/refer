@@ -34,7 +34,7 @@ const AddEmail = ({ onEmailAdded }) => {
   };
 
   return (
-    <div>
+    <div className='emailAdd'>
       <h2>Add Email</h2>
       <form onSubmit={handleSubmit}>
         <input

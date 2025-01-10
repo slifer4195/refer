@@ -1,14 +1,17 @@
 import React from 'react';
 import AddEmail from './components/Email/AddEmail';
 import EmailList from './components/Email/EmailList';
+import Navbar from './components/Navbar/Navbar';
 
 const App = () => {
   return (
-    <div>
-      <h1>Email Manager</h1>
+    <>
+      <Navbar />
+      
+      <h1>Email Managers</h1>
       <AddEmail />
       <EmailList />
-    </div>
+    </>
   );
 };
 

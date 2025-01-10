@@ -58,7 +58,7 @@ const EmailList = () => {
   };
 
   return (
-    <div>
+    <div className="email-container">
       <h2>Email List</h2>
       {error ? (
         <p style={{ color: 'red' }}>Failed to load emails: {error}</p>

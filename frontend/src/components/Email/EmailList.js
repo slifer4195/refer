@@ -32,7 +32,7 @@ const EmailList = () => {
 
     return () => {
       socket.disconnect(); // Clean up the socket connection when the component unmounts
-    };
+    }; 
   }, [socket]);
 
   const handleEmailClick = async (email) => {
